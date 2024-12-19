@@ -1,3 +1,4 @@
+"use client";
 import MarkdownEditor from "@/components/editor";
 import Image from "next/image";
 
