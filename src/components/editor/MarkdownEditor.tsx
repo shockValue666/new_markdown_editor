@@ -1,3 +1,4 @@
+"use client";
 import { BoldIcon, CodeIcon, CodeSquareIcon, Heading1Icon, Heading2Icon, Heading3Icon, ItalicIcon, ListIcon, ListOrderedIcon, RedoIcon, SaveIcon, TextIcon, TextQuoteIcon, UndoIcon } from 'lucide-react';
 import { Document, Text, History, Blockquote, Bold, BulletList, Code, CodeBlock, Heading, Italic, ListItem, OrderedList, Paragraph, Markdown } from './extensions';
 import { EditorContent, useEditor } from '@tiptap/react';
