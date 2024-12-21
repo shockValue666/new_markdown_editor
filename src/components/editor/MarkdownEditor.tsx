@@ -47,7 +47,7 @@ function MarkdownEditor({ initialContent, onSave, iconsSize = 18 }: MarkdownEdit
 
     return (
         <div className="w-full h-full flex flex-col min-h-96 bg-background text-foreground text-opacity-60">
-            <div data-cy="editor-menu" className="overflow-x-scroll w-full min-h-12 px-2 py-1 top-0 flex items-center border-b-border border-b gap-3 z-10 bg-background">
+            <div data-cy="editor-menu" className="overflow-x-scroll w-full min-h-12 px-2 py-1 top-0 sticky flex items-center border-b-border border-b gap-3 z-10 bg-background">
                 <NodeSelector editor={{
                     isActive: (node, attrs) => editor.isActive(node, attrs),
                     setNode: (node, attrs) => editor.chain().focus().setNode(node, attrs).run(),
@@ -148,13 +148,11 @@ function MarkdownEditor({ initialContent, onSave, iconsSize = 18 }: MarkdownEdit
                     <SaveIcon size={iconsSize}/>
                 </Button>
             </div>
-            <div className="flex-grow overflow-y-auto relative">
-                <EditorContent 
-                    spellCheck={false} 
-                    className="h-full min-h-[400px] p-6 focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2" 
-                    editor={editor} 
-                />
-            </div>
+			<EditorContent 
+				spellCheck={false} 
+				className="flex content-stretch items-stretch flex-grow focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2" 
+				editor={editor} 
+			/>
         </div>
     );
 }
