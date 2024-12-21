@@ -148,13 +148,11 @@ function MarkdownEditor({ initialContent, onSave, iconsSize = 18 }: MarkdownEdit
                     <SaveIcon size={iconsSize}/>
                 </Button>
             </div>
-            <div className="flex-grow overflow-y-auto relative">
-                <EditorContent 
-                    spellCheck={false} 
-                    className="h-full min-h-[400px] p-6 focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2" 
-                    editor={editor} 
-                />
-            </div>
+			<EditorContent 
+				spellCheck={false} 
+				className="flex content-stretch items-stretch flex-grow focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2" 
+				editor={editor} 
+			/>
         </div>
     );
 }
